@@ -11,7 +11,7 @@ This Telegram bot monitors specified groups for messages containing certain keyw
 1. Clone the repository:
     ```bash
     git clone https://github.com/ZiChuanShanFeng/Telegram-Keyword-Monitoring-Bot.git
-    cd telegram-bot-project
+    cd Telegram-Keyword-Monitoring-Bot
     ```
 
 2. Install dependencies:
@@ -48,7 +48,7 @@ This project is licensed under the MIT License.
 1. 克隆仓库：
     ```bash
     git clone https://github.com/ZiChuanShanFeng/Telegram-Keyword-Monitoring-Bot.git
-    cd telegram-bot-project
+    cd Telegram-Keyword-Monitoring-Bot
     ```
 
 2. 安装依赖：
