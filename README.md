@@ -1,86 +1,111 @@
-# Telegram Keyword Monitoring Bot
+# PagerMaid Shift
 
-[中文](#中文说明) | [English](#english-description)
+PagerMaid Shift 是一个 Telegram 机器人插件，用于自动转发消息。它支持多种选项，如静默转发、按类型过滤消息（文字、照片、文档、视频）以及按关键字过滤。
 
-## English Description
+PagerMaid Shift is a Telegram bot plugin for automatically forwarding messages. It supports various options like silent forwarding, filtering messages by type (text, photo, document, video), and filtering by keywords.
 
-This Telegram bot monitors specified groups for messages containing certain keywords and forwards them to a target group.
+[English](#english-version) | [中文](#中文版本)
 
-### Setup
+## 中文版本
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/ZiChuanShanFeng/Telegram-Keyword-Monitoring-Bot.git
-    cd Telegram-Keyword-Monitoring-Bot
+### 功能
+
+- **自动转发消息**: 自动将一个频道的新消息转发到另一个频道。
+- **关键字过滤**: 仅转发包含特定关键字的消息。
+- **类型过滤**: 仅转发特定类型的消息，如文字、照片、文档、视频。
+- **静默转发**: 禁用通知进行静默转发。
+
+### 安装
+
+1. 克隆这个仓库并进入项目目录：
+    ```sh
+    git clone https://github.com/ZiChuanShanFeng/pagermaid-shift.git
+    cd pagermaid-shift
     ```
 
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
+2. 配置 PagerMaid，添加并启用 `shift` 插件。
+
+### 使用方法
+
+- **设置转发**:
+    ```
+    /shift set [来源频道] [目标频道] (silent) (keywords:[keyword1,keyword2,...])
     ```
 
-3. Set your bot token, target chat ID, source chat IDs, and keywords in `bot.py`.
-
-4. Run the bot:
-    ```bash
-    python bot.py
+- **删除转发**:
+    ```
+    /shift del [来源频道]
     ```
 
-### Configuration
-
-- `TOKEN`: Your bot's token.
-- `TARGET_CHAT_ID`: The chat ID of the target group.
-- `SOURCE_CHAT_IDS`: A list of chat IDs of the groups to monitor.
-- `KEYWORDS`: A list of keywords to monitor.
-
-### License
-
-This project is licensed under the MIT License.
-
----
-
-## 中文说明
-
-这个 Telegram 机器人可以监控指定群组中的消息，如果消息中包含特定关键词，就将其转发到目标群组。
-
-### 设置
-
-1. 克隆仓库：
-    ```bash
-    git clone https://github.com/ZiChuanShanFeng/Telegram-Keyword-Monitoring-Bot.git
-    cd Telegram-Keyword-Monitoring-Bot
+- **备份频道**:
+    ```
+    /shift backup [来源频道] [目标频道] (silent)
     ```
 
-2. 安装依赖：
-    ```bash
-    pip install -r requirements.txt
+- **列出所有转发**:
+    ```
+    /shift list
     ```
 
-3. 在 `bot.py` 中设置你的 bot token、目标群组的 chat ID、监控的群组 chat ID 列表和关键词。
+### 示例
 
-4. 运行机器人：
-    ```bash
-    python bot.py
+设置从 `source_channel` 转发消息到 `target_channel`：
+/shift set source_channel target_channel all
+
+删除转发规则：
+/shift del source_channel
+
+## English Version
+
+### Features
+
+- **Automatic Message Forwarding**: Automatically forward new messages from one channel to another.
+- **Keyword Filtering**: Forward only messages containing specific keywords.
+- **Type Filtering**: Forward only specific types of messages such as text, photo, document, and video.
+- **Silent Forwarding**: Forward messages without notifications.
+
+### Installation
+
+1. Clone the repository and enter the project directory:
+    ```sh
+    git clone https://github.com/ZiChuanShanFeng/pagermaid-shift.git
+    cd pagermaid-shift
     ```
 
-### 配置
 
-- `TOKEN`：你的 bot 的 token。
-- `TARGET_CHAT_ID`：目标群组的 chat ID。
-- `SOURCE_CHAT_IDS`：监控的群组 chat ID 列表。
-- `KEYWORDS`：监控的关键词列表。
+2. Configure PagerMaid, add and enable the `shift` plugin.
 
-### 许可证
+### Usage
 
-此项目采用 MIT 许可证。
+- **Set up forwarding**:
+    ```
+    /shift set [from channel] [to channel] (silent) (keywords:[keyword1,keyword2,...])
+    ```
 
----
+- **Delete forwarding**:
+    ```
+    /shift del [from channel]
+    ```
 
-## Project Structure
+- **Backup channel**:
+    ```
+    /shift backup [from channel] [to channel] (silent)
+    ```
 
-```plaintext
-telegram-bot-project/
-├── .gitignore
-├── README.md
-├── requirements.txt
-└── bot.py
+- **List all forwardings**:
+    ```
+    /shift list
+    ```
+
+### Examples
+
+Set up forwarding from `source_channel` to `target_channel`:
+/shift set source_channel target_channel all
+
+
+Delete forwarding rule:
+/shift del source_channel
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
