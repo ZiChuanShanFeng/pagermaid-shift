@@ -22,6 +22,7 @@ Keyword Forwarding
 Keyword List Query/Add/Delete
 Blacklist Word Detection
 Blacklist List Query/Add/Delete
+
 Principle: Detect Blacklist Words first, then detect Keywords. If there are no Blacklist Words and Keywords exist, then forward.
 
 
