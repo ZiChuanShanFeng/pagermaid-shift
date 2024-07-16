@@ -6,7 +6,24 @@
 
 PagerMaid Shift 是一个 Telegram 机器人插件，用于自动转发消息。它支持多种选项，如静默转发、按类型过滤消息（文字、照片、文档、视频）以及按关键字过滤。
 
+更新:新添功能(可选)：
+keywords 关键词转发
+keywords 列表查询/添加/删除
+blacklist 黑名单词检测
+blacklist 列表查询/添加/删除
+
+原理：先检测黑名单词 再检测关键词
+若不存在黑名单词且存在关键词则进行转发
+
 PagerMaid Shift is a Telegram bot plugin for automatically forwarding messages. It supports various options like silent forwarding, filtering messages by type (text, photo, document, video), and filtering by keywords.
+
+Updated: New Features (Optional):
+Keyword Forwarding
+Keyword List Query/Add/Delete
+Blacklist Word Detection
+Blacklist List Query/Add/Delete
+Principle: Detect Blacklist Words first, then detect Keywords. If there are no Blacklist Words and Keywords exist, then forward.
+
 
 [中文](#中文版本) | [English](#english-version)
 
